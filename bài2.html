@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas Olympic</title>
+</head>
+
+<body>
+
+<canvas id="myCanvas" width="600" height="400" style="border:2px solid blue;"></canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.font = "40px Arial";
+ctx.fillStyle = "green";
+ctx.textAlign = "center";
+ctx.fillText("PARIS 2024",300,80);
+
+
+function circle(x,y,color){
+    ctx.beginPath();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = color;
+    ctx.arc(x,y,50,0,Math.PI*2);
+    ctx.stroke();
+}
+
+circle(200,180,"blue");
+circle(300,180,"black");
+circle(400,180,"red");
+
+circle(250,230,"yellow");
+circle(350,230,"green");
+
+</script>
+
+</body>
+</html>
